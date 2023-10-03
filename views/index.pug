@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1 PaLM API - Dietary counter.
+  form(id="textForm")
+    label(for="textInput") Enter Text:
+    textarea(id="textInput" rows="4" cols="50")
+    button(type="button" id="sendButton") Send
+  div(id="response")
+  div(id="error", class="json-container")
