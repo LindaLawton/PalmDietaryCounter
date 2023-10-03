@@ -30,3 +30,18 @@ I had a carrot a potato and a pizza for lunch.
 It will return the calorie count.
 
 You can also ask it for things like carbs.
+
+
+# prompt ideas for future.
+
+Give it an idea of what the default size of things are.  A glass being eight ounces. 
+
+It seems to grab very small sizes for things like a potato.
+
+## Less accurate
+
+I ate a potato
+
+## more accurate 
+
+I ate 200 grams of potatoes.

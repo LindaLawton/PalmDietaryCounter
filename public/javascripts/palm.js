@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let path = window.location.protocol + '//' + window.location.hostname + ':' + window.location.port;
 
     // Define the API endpoint URL
-    const apiUrl = path + "/palm"// "http://localhost:3000/palm"; // Replace with your actual API endpoint URL
+    const apiUrl = path + "/palm"// Grabs current endpoint.
 
     sendButton.addEventListener("click", function () {
         const text = textInput.value;
@@ -32,10 +32,10 @@ document.addEventListener("DOMContentLoaded", function () {
                     throw new Error(`Palm API returned an error: .${data.message[0]}`);
                 }
                 // Verify response is json
+                let clean;
                 try {
-                    clean = data.message[0].candidates[0].output.replace("json", "").replace("```","").replace("```","").replace("\n","")
-                    let parsedJson = JSON.parse(clean);
-                    return parsedJson;
+                    clean = data.message[0].candidates[0].output.replace("json", "").replace("```", "").replace("```", "").replace("\n", "")
+                    return JSON.parse(clean);
                 } catch (e) {
                     // sometimes the API returns garbage json.
                     throw new Error(`Cant parse response: .${clean}`);
