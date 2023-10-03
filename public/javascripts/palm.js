@@ -8,8 +8,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const responseDiv = document.getElementById("response");
     const errorDiv = document.getElementById("error");
 
+    let path = window.location.protocol + '//' + window.location.hostname + ':' + window.location.port;
+
     // Define the API endpoint URL
-    const apiUrl = "http://localhost:3000/palm"; // Replace with your actual API endpoint URL
+    const apiUrl = path + "/palm"// "http://localhost:3000/palm"; // Replace with your actual API endpoint URL
 
     sendButton.addEventListener("click", function () {
         const text = textInput.value;
