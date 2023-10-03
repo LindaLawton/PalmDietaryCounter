@@ -13,7 +13,7 @@ This is a sample project using the Palm api with node.js using natural language 
     API_URL=http://localhost
 
 
-# then it will run on
+# Run it
 
 current runs on http://localhost:3000/
 
